@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import Stepper from "@mui/material/Stepper";
 import Step from "@mui/material/Step";
-import { Grid } from "@mui/material";
+
 import StepLabel from "@mui/material/StepLabel";
 import "../App.css";
 import { QuizContext } from "../Helpers/Contexts";
