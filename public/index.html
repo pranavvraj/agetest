@@ -8,16 +8,12 @@
     <meta
       name="description"
       content="Web site created using create-react-app"
-      <script async="async" src="https://www.google.com/adsense/search/ads.js"></script>
-
-<!-- other head elements from your page -->
-
-<script type="text/javascript" charset="utf-8">
-(function(g,o){g[o]=g[o]||function(){(g[o]['q']=g[o]['q']||[]).push(
-  arguments)},g[o]['t']=1*new Date})(window,'_googCsa');
-</script>
-    
-    <!-- <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" /> -->
+      <!--
+      <link
+      rel="apple-touch-icon"
+      href="%PUBLIC_URL%/logo192.png"
+    />
+    -->
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
@@ -39,6 +35,23 @@
     -->
     <title>Age Test</title>
   </head>
+  <script
+    async="async"
+    src="https://www.google.com/adsense/search/ads.js"
+  ></script>
+
+  <!-- other head elements from your page -->
+
+  <script type="text/javascript" charset="utf-8">
+    (function (g, o) {
+      (g[o] =
+        g[o] ||
+        function () {
+          (g[o]["q"] = g[o]["q"] || []).push(arguments);
+        }),
+        (g[o]["t"] = 1 * new Date());
+    })(window, "_googCsa");
+  </script>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
@@ -52,24 +65,22 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-    <div id='afscontainer1'></div>
+    <div id="afscontainer1"></div>
 
-<script type="text/javascript" charset="utf-8">
+    <script type="text/javascript" charset="utf-8">
+      var pageOptions = {
+        pubId: "pub-9616389000213823", // Make sure this the correct client ID!
+        query: "hotels",
+        adPage: 1,
+      };
 
-  var pageOptions = {
-    "pubId": "pub-9616389000213823", // Make sure this the correct client ID!
-    "query": "hotels",
-    "adPage": 1
-  };
+      var adblock1 = {
+        container: "afscontainer1",
+        width: "700",
+        number: 2,
+      };
 
-  var adblock1 = {
-    "container": "afscontainer1",
-    "width": "700",
-    "number": 2
-  };
-
-  _googCsa('ads', pageOptions, adblock1);
-
-</script>
+      _googCsa("ads", pageOptions, adblock1);
+    </script>
   </body>
 </html>
