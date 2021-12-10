@@ -13,15 +13,15 @@ const EndScreen = ({ age }) => {
   const yourAge = (age) => {
     let realAge = Math.ceil((score + parseInt(age)) / 2);
     if (realAge < 5) {
-      return "Toddler";
+      return "You are a toddler !";
     } else if (5 < realAge && realAge < 12) {
-      return "Kid";
+      return "Kid ";
     } else if (12 < realAge && realAge < 19) {
-      return "Teen";
+      return "Teen !";
     } else if (19 < realAge && realAge < 25) {
-      return "You are a young adult";
+      return "You are a young adult !";
     } else {
-      return "Mature";
+      return "You are Mature !";
     }
   };
   return (

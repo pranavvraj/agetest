@@ -187,8 +187,8 @@ export const Questions = [
     prompt: "Your gender?",
     optionA: "Male",
     optionB: "Female",
-    optionC: "Trans",
-    optionD: "Other",
+    optionC: "Other",
+    optionD: "Not prefer to tell",
     answer: "E",
   },
 ];
