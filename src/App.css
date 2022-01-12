@@ -7,7 +7,10 @@
 .App {
   width: 100%;
   height: 100vh;
-  overflow-x: hidden;
+  background-color: white;
+
+  /* overflow-x: hidden;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='900' preserveAspectRatio='none' viewBox='0 0 1440 900'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1058%26quot%3b)' fill='none'%3e%3crect width='1440' height='900' x='0' y='0' fill='rgba(255%2c 241%2c 185%2c 1)'%3e%3c/rect%3e%3cpath d='M0%2c383.489C71.053%2c377.486%2c126.138%2c326.83%2c190.992%2c297.19C268.933%2c261.569%2c381.601%2c268.43%2c419.702%2c191.671C457.555%2c115.411%2c381.754%2c30.965%2c364.524%2c-52.411C348.632%2c-129.311%2c371.547%2c-218.116%2c322.367%2c-279.333C272.88%2c-340.932%2c183.56%2c-344.98%2c108.84%2c-370.676C30.137%2c-397.742%2c-47.708%2c-457.886%2c-127.439%2c-434.019C-207.154%2c-410.157%2c-237.815%2c-316.099%2c-289.999%2c-251.286C-340.002%2c-189.183%2c-419.253%2c-140.765%2c-427.414%2c-61.453C-435.543%2c17.557%2c-369.496%2c81.648%2c-331.428%2c151.358C-296.292%2c215.698%2c-272.971%2c289.262%2c-212.925%2c331.318C-151.834%2c374.106%2c-74.32%2c389.769%2c0%2c383.489' fill='%23ffe680'%3e%3c/path%3e%3cpath d='M1440 1405.785C1546.26 1415.238 1656.193 1431.8600000000001 1752.998 1387.034 1856.217 1339.238 1936.737 1251.689 1989.922 1151.141 2045.059 1046.902 2060.314 929.096 2057.582 811.205 2054.565 681.014 2054.848 539.419 1973.3899999999999 437.815 1891.134 335.21500000000003 1756.1390000000001 271.12 1624.637 271.18600000000004 1501.762 271.24800000000005 1423.844 409.365 1304.3890000000001 438.151 1174.724 469.398 1008.149 349.981 912.39 442.823 819.425 532.957 917.154 694.283 907.063 823.375 897.856 941.151 803.246 1060.993 855.796 1166.797 908.47 1272.85 1051.257 1289.5230000000001 1160.855 1334.358 1251.588 1371.476 1342.354 1397.099 1440 1405.785' fill='%23fffcf2'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1058'%3e%3crect width='1440' height='900' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e"); */
 }
 .title {
   display: flex;
@@ -15,12 +18,21 @@
   justify-content: center;
   flex-direction: column;
 }
+.title p {
+  font-size: 30px;
+  color: black;
+  font-weight: bold;
+}
 .App h1 {
-  color: #e9ba00;
-  font-size: 95px;
+  color: #f44786;
+  font-size: 45px;
+  margin-top: 40px;
 }
 .App p {
-  margin-top: 15px;
+  margin-top: 25px;
+  font-size: 18px;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 .menu {
   display: flex;
@@ -28,24 +40,14 @@
   justify-content: space-around;
   flex-direction: column;
 }
-input {
-  padding: 10px;
-  width: 10%;
-  margin-top: 30px;
-  background: rgb(243, 243, 243);
-  border-radius: 5px;
-  font-size: 20px;
-  border: none;
-}
-input:hover {
-  border: 1px solid rgb(187, 187, 187);
-}
+
 .menu h2 {
   margin-top: 80px;
+  font-size: 35px;
 }
 .menu select {
   margin-top: 15px;
-  padding: 5px 30px;
+  padding: 5px 80px;
 }
 .Select-menu-outer {
   top: auto;
@@ -54,19 +56,26 @@ input:hover {
 .menu button {
   margin-top: 45px;
   padding: 12px 50px;
-  color: #e9ba00;
-  border-radius: 20px;
+  color: white;
+  border: #f44786;
+  border-radius: 30px;
+  width: 200px;
   transition-duration: 0.2s;
-  border: 1.5px solid #e9ba00;
-  background-color: white;
+  border: none;
+  background-color: #ed1b76;
   font-size: 20px;
 }
 .menu button:hover {
-  color: white;
-  background-color: #e9ba00;
+  background-color: #ff76a8;
+}
+.menu button:active {
+  transform: scale(0.98);
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
 }
 .quiz h1 {
   margin-top: 80px;
+  margin-right: 90px;
+  margin-left: 90px;
   padding: 0px 5px;
   font-size: 40px;
 }
@@ -75,84 +84,86 @@ input:hover {
   align-items: center;
   justify-content: space-around;
   flex-direction: column;
-  margin-top: 50px;
 }
 .options button {
-  color: #e9ba00;
-  border: none;
-  font-size: 20px;
-  background-color: white;
-  margin: 1px 10px;
-  padding: 5px 15px;
-  border-radius: 20px;
+  margin-top: 25px;
+  width: 410px;
+  padding: 20px 20px;
+  color: black;
+  border: #fff9e1;
+  border-radius: 45px;
   transition-duration: 0.2s;
-  background-color: none;
-  size: 20px;
+  border: none;
+  background-color: #ffeff5;
+  font-size: 18px;
 }
 .options button:hover {
-  box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.4);
+  background-color: #f44786;
+  color: white;
+}
+.options button:active {
+  background-color: #f44786;
+  color: white;
 }
 #next {
-  margin-top: 50px;
+  margin-top: 45px;
   padding: 12px 50px;
-  color: #e9ba00;
-  border-radius: 20px;
+  color: white;
+  border: #f44786;
+  border-radius: 35px;
   transition-duration: 0.2s;
-  border: 1.5px solid #e9ba00;
-  background-color: white;
+  border: none;
+  background-color: #ed1b76;
   font-size: 20px;
 }
 #next:hover {
-  color: white;
-  background-color: #e9ba00;
+  background-color: #f44786;
 }
 #finish {
   margin-top: 50px;
   padding: 12px 50px;
-  color: #e9ba00;
+  color: #f44786;
   border-radius: 20px;
   transition-duration: 0.2s;
-  border: 1.5px solid #e9ba00;
+  border: 1.5px solid #f44786;
   background-color: white;
   font-size: 20px;
 }
 #finish:hover {
   color: white;
-  background-color: #e9ba00;
+  background-color: #f44786;
 }
 .share {
   display: flex;
   align-items: center;
   justify-content: space-around;
   flex-direction: column;
-  border: 1.5px solid #e9ba00;
-  margin-top: 100px;
+  margin-top: 30px;
 }
 .share h3 {
   padding-top: 100px;
-  color: #e9ba00;
+  color: #f44786;
   font-size: 25px;
 }
 .sharebtns {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  padding-top: 80px;
-  padding-bottom: 100px;
+  margin-top: 30px;
+  margin-bottom: 50px;
   width: 100%;
 }
 .sharebtns button {
   background: none;
   border: none;
-  color: #e9ba00;
+  color: #f44786;
   font-size: 15px;
 }
 .Navbar {
-  background-color: white;
   width: 100%;
-
-  font-family: Arial, Helvetica, sans-serif;
   display: flex;
+  margin-bottom: 0px;
+  background-color: white;
 }
 .Navbar .leftSide {
   flex: 30%;
@@ -173,28 +184,25 @@ input:hover {
   text-decoration: none;
   font-size: 18px;
   color: white;
-  margin-left: 25px;
+  margin-left: 0px;
 }
 .Navbar .rightSide .buttons {
   margin-right: 25px;
   display: flex;
   align-items: center;
 }
-
 .navbtns {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
 .Navbar .rightSide .buttons button {
   margin: 1px 10px;
-  padding: 5px 15px;
-  border-radius: 20px;
+  padding: 8px 35px;
+  border-radius: 6px;
   transition-duration: 0.2s;
-  background-color: none;
+  font-size: 18px;
 }
-
 select:hover {
   outline: none;
   border: 1px solid #bbbbbb;
@@ -212,33 +220,39 @@ input [type="text"] {
   max-width: auto;
 }
 .login {
-  color: #e9ba00;
+  background-color: white;
+  color: #f44786;
   border: none;
   font-size: 15px;
-  background-color: white;
-}
-.login:hover {
-  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1);
-}
-.signup {
-  border: 1.5px solid #e9ba00;
-  color: #e9ba00;
-  background-color: white;
-  font-size: 15px;
-}
-.signup:hover {
-  color: white;
-  background-color: #e9ba00;
+  margin-top: 30px;
 }
 
+.signup {
+  background-color: white;
+  color: #ff6fa4;
+  font-size: 15px;
+  border: none;
+}
+.signup:hover {
+  color: #f44786;
+}
 button:hover {
   cursor: pointer;
 }
-
+.logocontainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .logoimg {
-  width: 120px;
-  margin-top: 20px;
-  margin-left: 0px;
+  width: 190px;
+  margin-top: 40px;
+  /* filter: brightness(0) invert(1); */
+}
+.ad {
+  background-color: lightgray;
+  padding: 20px 5px;
+  align-items: center;
 }
 .quiz {
   display: flex;
@@ -265,38 +279,38 @@ button:hover {
 .EndScreen button {
   margin-top: 50px;
   padding: 12px 50px;
-  color: #e9ba00;
+  color: #f44786;
   border-radius: 20px;
   transition-duration: 0.2s;
-  border: 1.5px solid #e9ba00;
-  background-color: white;
+  border: 1.5px solid #f44786;
+  background-color: #fffcf0;
   font-size: 20px;
 }
 .EndScreen button:hover {
   color: white;
-  background-color: #e9ba00;
+  background-color: #f44786;
 }
 .about {
   display: grid;
   grid-template-columns: repeat(2, 10fr);
-  column-gap: 150px;
+  column-gap: 10px;
   justify-content: center;
-  margin-top: 300px;
-  background: #e9ba00;
+  margin-top: 50px;
+  background: #f44786;
   color: white;
 }
 .about h3 {
-  padding-top: 50px;
-  font-size: 25px;
-  padding-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-top: 20px;
+  font-size: 30px;
+  padding-left: 100px;
+  padding-right: 60px;
 }
 .about p {
-  padding-top: 25px;
-  padding-bottom: 70px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-top: 0px;
+  padding-bottom: 10px;
+  padding-left: 50px;
+  padding-right: 10px;
+  font-size: 17px;
 }
 .footer {
   display: flex;
@@ -312,59 +326,85 @@ button:hover {
   text-decoration: none;
   width: 100%;
   margin-top: 70px;
+  background-color: #ffdae8;
 }
 .footerlinks a {
-  color: #c49c00;
+  color: #e7266d;
   text-decoration: none;
+  padding: 5px 0px;
+}
+.footerlinks a:hover {
+  color: #f44786;
 }
 .lang {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  background: #e9ba00;
+  background: #f44786;
   width: 100%;
-  margin-top: 12px;
 }
 .lang button {
   padding: 6px 4px;
   background: none;
   border: none;
   color: white;
+  font-size: 16px;
 }
 .quiz h1,
 h2 {
-  color: #e9ba00;
+  color: #f44786;
+  margin-left: 60px;
+  margin-right: 60px;
+  margin-top: 30px;
 }
 .quiz p {
-  color: #a78500;
+  color: #ed1b76;
 }
 
 @media screen and (max-width: 700px) {
   .App h1 {
-    font-size: 60px;
+    font-size: 30px;
+    margin: 0px 30px;
   }
   input {
     width: 40%;
+  }
+  .Navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .menu h2 {
+    font-size: 1px;
+    margin-left: 50px;
   }
   .EndScreen h1 {
     font-size: 30px;
     margin-top: 60px;
   }
-  .quiz h1 {
+  .quiz h1,
+  h2 {
     font-size: 25px;
+    padding: 0px 0px;
+  }
+  .options button {
+    width: 270px;
   }
   .share h3 {
     padding: 0px 9px;
+    font-weight: bold;
+    color: white;
   }
   .sharebtns {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    background-color: #ffdae8;
   }
   .sharebtns button {
     font-size: 20px;
-    padding: 10px 0px;
+    padding: 20px 0px;
   }
   .about {
     display: flex;

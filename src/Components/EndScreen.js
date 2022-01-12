@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { QuizContext } from "../Helpers/Contexts";
 import {} from "../Helpers/QuestionBank";
 import "../App.css";
+import sgh from "../assets/sgh.png";
 
 const EndScreen = ({ age }) => {
   const { score, setScore, setGameState } = useContext(QuizContext);
@@ -12,13 +13,13 @@ const EndScreen = ({ age }) => {
   };
   const yourAge = (age) => {
     let realAge = Math.ceil((score + parseInt(age)) / 2);
-    if (realAge < 5) {
-      return "You are a toddler !";
-    } else if (5 < realAge && realAge < 12) {
+    if (realAge < 2) {
+      return <img className="sghimg" src={sgh} alt="" />;
+    } else if (2 < realAge && realAge < 4) {
       return "Kid ";
-    } else if (12 < realAge && realAge < 19) {
+    } else if (4 < realAge && realAge < 6) {
       return "Teen !";
-    } else if (19 < realAge && realAge < 25) {
+    } else if (6 < realAge && realAge < 8) {
       return "You are a young adult !";
     } else {
       return "You are Mature !";
@@ -28,7 +29,7 @@ const EndScreen = ({ age }) => {
     <div className="EndScreen">
       <h1>Your real age: {Math.ceil((score + parseInt(age)) / 2)}</h1>
       {}
-      <h2>{yourAge(age)}</h2>
+      <div>{yourAge(age)}</div>
       <button onClick={restartQuiz}>Restart Quiz</button>
     </div>
   );

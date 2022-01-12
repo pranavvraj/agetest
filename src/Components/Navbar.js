@@ -1,5 +1,5 @@
 import "../App.css";
-import logo from "../assets/agetest trns.png";
+// import logo from "../assets/agetest trns.png";
 
 // import logo from "../assets/qrlogotrans.png";
 
@@ -12,7 +12,7 @@ const Navbar = ({ myRef }) => {
       <div className="leftSide">
         <div className="links">
           <a href="http://agetest.co">
-            <img className="logoimg" src={logo} alt="" />
+            <p>Squid game player</p>
           </a>
         </div>
       </div>

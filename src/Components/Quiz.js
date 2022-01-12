@@ -1,8 +1,8 @@
 import React, { useState, useContext } from "react";
-import Stepper from "@mui/material/Stepper";
-import Step from "@mui/material/Step";
+// import Stepper from "@mui/material/Stepper";
+// import Step from "@mui/material/Step";
 
-import StepLabel from "@mui/material/StepLabel";
+// import StepLabel from "@mui/material/StepLabel";
 import "../App.css";
 import { QuizContext } from "../Helpers/Contexts";
 import { Questions } from "../Helpers/QuestionBank";
@@ -11,11 +11,11 @@ const Quiz = () => {
   const { score, setScore, setGameState } = useContext(QuizContext);
   const [currQuestion, setCurrQuestion] = useState(0);
   const [optionChosen, setOptionChosen] = useState("");
-  const [activeStep, setActiveStep] = React.useState(0);
+  // const [activeStep, setActiveStep] = React.useState(0);
 
-  const nextStep = () => {
-    setActiveStep((currentStep) => currentStep + 1);
-  };
+  // const nextStep = () => {
+  //   setActiveStep((currentStep) => currentStep + 1);
+  // };
 
   const nextQuestion = () => {
     if (Questions[currQuestion].answer === optionChosen) {
@@ -35,7 +35,7 @@ const Quiz = () => {
 
   return (
     <div className="quiz">
-      <Stepper className="stepper" activeStep={activeStep}>
+      {/* <Stepper className="stepper" activeStep={activeStep}>
         <Step>
           <StepLabel></StepLabel>
         </Step>
@@ -72,45 +72,9 @@ const Quiz = () => {
         <Step>
           <StepLabel></StepLabel>
         </Step>
-        <Step>
-          <StepLabel></StepLabel>
-        </Step>
-        <Step>
-          <StepLabel></StepLabel>
-        </Step>
-        <Step>
-          <StepLabel></StepLabel>
-        </Step>
-        <Step>
-          <StepLabel></StepLabel>
-        </Step>
-        <Step>
-          <StepLabel></StepLabel>
-        </Step>
-        <Step>
-          <StepLabel></StepLabel>
-        </Step>
-        <Step>
-          <StepLabel></StepLabel>
-        </Step>
-        <Step>
-          <StepLabel></StepLabel>
-        </Step>
-        <Step>
-          <StepLabel></StepLabel>
-        </Step>
-        <Step>
-          <StepLabel></StepLabel>
-        </Step>
-        <Step>
-          <StepLabel></StepLabel>
-        </Step>
-        <Step>
-          <StepLabel></StepLabel>
-        </Step>
-      </Stepper>
+      </Stepper> */}
 
-      <h1 id="question">{Questions[currQuestion].prompt}</h1>
+      <h2 id="question">{Questions[currQuestion].prompt}</h2>
       <div className="options">
         <button onClick={() => setOptionChosen("A")}>
           {Questions[currQuestion].optionA}
@@ -134,7 +98,7 @@ const Quiz = () => {
         <button
           id="next"
           onClick={() => {
-            nextStep();
+            // nextStep();
             nextQuestion();
           }}
         >
