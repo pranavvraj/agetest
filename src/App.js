@@ -37,7 +37,7 @@ function App() {
 
   const [gameState, setGameState] = useState("menu");
   const [score, setScore] = useState(0);
-  const [age, setAge] = useState("");
+  // const [age, setAge] = useState("");
   const myRef = useRef(null);
 
   return (
@@ -56,9 +56,9 @@ function App() {
       <QuizContext.Provider
         value={{ gameState, setGameState, score, setScore }}
       >
-        {gameState === "menu" && <Mainmenu age={age} setAge={setAge} />}
+        {gameState === "menu" && <Mainmenu />}
         {gameState === "quiz" && <Quiz />}
-        {gameState === "endScreen" && <EndScreen age={age} />}
+        {gameState === "endScreen" && <EndScreen />}
       </QuizContext.Provider>
       <div className="share">
         <h2>

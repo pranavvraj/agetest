@@ -28,7 +28,7 @@ const Quiz = () => {
 
   const finishQuiz = () => {
     if (Questions[currQuestion].answer === optionChosen) {
-      setScore(score + 1);
+      setScore(score + 2);
     }
     setGameState("endScreen");
   };

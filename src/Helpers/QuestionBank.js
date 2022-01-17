@@ -15,7 +15,7 @@ export const Questions = [
     optionB: "The Guards with guns",
     optionC: "My own physical condition",
     optionD: "The other participants",
-    answer: "C",
+    answer: "B",
   },
   {
     prompt:
@@ -30,9 +30,9 @@ export const Questions = [
     prompt: "Q4. What would you do after becoming a team?",
     optionA: "Take initiative to communicate, we should help each other.",
     optionB: "Stay alert and do not talk too much.",
-    optionC: "Get food for everyone",
-    optionD: "Pass orders",
-    answer: "C",
+    optionC: "Pass orders",
+    optionD: "Get food for everyone",
+    answer: "D",
   },
   {
     prompt:

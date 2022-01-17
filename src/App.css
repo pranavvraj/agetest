@@ -352,7 +352,7 @@ button:hover {
 }
 .quiz h1,
 h2 {
-  color: #f44786;
+  color: #bd0045;
   margin-left: 60px;
   margin-right: 60px;
   margin-top: 30px;
@@ -361,6 +361,15 @@ h2 {
   color: #ed1b76;
 }
 
+.player {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.player img {
+  width: 80%;
+}
 @media screen and (max-width: 700px) {
   .App h1 {
     font-size: 30px;
@@ -390,6 +399,13 @@ h2 {
   .options button {
     width: 270px;
   }
+
+  /* .player {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+  } */
   .share h3 {
     padding: 0px 9px;
     font-weight: bold;
